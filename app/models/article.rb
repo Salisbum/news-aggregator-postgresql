@@ -10,7 +10,7 @@ class Article
 
   def self.all
     raw_article_list = []
-
+    # binding.pry
     db_connection do |conn|
       raw_article_list = conn.exec("SELECT * FROM articles;")
     end

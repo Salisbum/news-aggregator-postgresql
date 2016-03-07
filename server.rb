@@ -7,6 +7,7 @@ set :views, File.join(File.dirname(__FILE__), "app", "views")
 
 configure :development do
   set :db_config, { dbname: "news_aggregator_development" }
+  # set :db_config, { dbname: "megsalisbury" }
 end
 
 configure :test do
@@ -27,10 +28,8 @@ get '/' do
 end
 
 get '/articles' do
-
-  @articles = []
-
-  @articles = db_connection { |conn| conn.exec("SELECT * FROM articles;") }
+  # binding.pry
+  @articles = Article.all
 
   erb :articles
 end
@@ -43,4 +42,6 @@ post '/articles' do
   article = Article.new("title" => params[:article_title], "url" => params[:article_url], "description" => params[:article_description])
 
   article.save
+
+  redirect '/articles'
 end
