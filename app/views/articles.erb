@@ -8,8 +8,7 @@
     <h2>Slacker Articles</h2>
     <ul>
       <% @articles.each do |article| %>
-      <% articles = article.split(",") %>
-        <li><%= articles[0] %> | <a href="<%= articles[1] %>" target="_blank"> <%= articles[1] %></a> | <%= articles[2] %></a>
+        <li><%= article.title %> | <a href="<%= article.url %>" target="_blank"> <%= article.url %></a> | <%= article.description %></a>
         </li><br>
       <% end %>
     </ul>
