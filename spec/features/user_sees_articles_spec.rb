@@ -1,4 +1,4 @@
-require "spec_helper"
+require "spec_helper" 
 
 feature "user sees all articles" do
   scenario "user views articles with their title, url, and description" do

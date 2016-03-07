@@ -1,4 +1,4 @@
-require "spec_helper"
+require "spec_helper" 
 
 feature "user adds article" do
   let(:title) { "Valid Title" }
