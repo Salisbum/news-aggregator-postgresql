@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slacker Articles</title>
+  </head>
+
+  <body>
+    <h2>Submit New Article</h2>
+    <form action="/articles" method="post">
+    <label for="article_title">Article Title:</label>
+    <input type="text" required id="article_title" name="article_title">
+    <br>
+    <label for="article_url">Article URL:</label>
+    <input type="url" id="article_url" name="article_url" required title="must be a complete URL with 'http'">
+    <br>
+    <label for="article_description">Article Description:</label>
+    <input type="text" id="article_description" name="article_description" pattern=".{20,}" required title="20 characters minimum">
+
+    <input type="submit">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Slacker Articles</title>
+  </head>
+
+  <body>
+    <h2>Slacker Articles</h2>
+    <ul>
+      <% @articles.each do |article| %>
+      <% articles = article.split(",") %>
+        <li><%= articles[0] %> | <a href="<%= articles[1] %>" target="_blank"> <%= articles[1] %></a> | <%= articles[2] %></a>
+        </li><br>
+      <% end %>
+    </ul>
+  </body>
+</html>

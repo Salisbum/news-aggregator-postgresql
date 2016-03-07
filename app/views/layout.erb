@@ -1,10 +1,18 @@
 <!doctype html>
-<html>
-  <head>
-    <title>News Aggregator</title>
-  </head>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Slacker News</title>
+  <link rel="stylesheet" href="/stylesheets/app.css">
+</head>
 
-  <body>
-    <%= yield %>
-  </body>
+<body>
+  <script src="/javascripts/app.js"></script>
+  <nav>
+  <a href="/">Homepage</a> |
+  <a href="/articles">Articles</a> |
+  <a href="/articles/new">Submit</a>
+</nav>
+  <%= yield %>
+</body>
 </html>
